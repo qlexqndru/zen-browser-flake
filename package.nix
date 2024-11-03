@@ -11,6 +11,7 @@
   ffmpeg,
   gtk3,
   libglvnd,
+  libnotify,
   libva,
   mesa,
   pciutils,
@@ -71,6 +72,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       pipewire
       pulseaudio
       libva
+      libnotify
       libglvnd
       mesa
       ffmpeg
