@@ -3,7 +3,7 @@
 This is a flake for the Zen browser.
 
 ## Update
-This version has an automatic daily updater, so zen is always up to date (for the updates freaks like me).
+This version has an automatic daily updates, so zen is always up to date (for the updates freaks like me).
 
 ## Kudos
 Special thanks to [fufexan](https://github.com/fufexan) and [MarceColl](https://github.com/MarceColl) for this awesome flake!
