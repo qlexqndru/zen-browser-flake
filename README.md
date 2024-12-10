@@ -2,11 +2,17 @@
 
 This is a flake for the Zen browser.
 
+## Update
+This version has an automatic daily updater, so zen is always up to date (for the updates freaks like me).
+
+## Kudos
+Special thanks to [fufexan](https://github.com/fufexan) and [MarceColl](https://github.com/MarceColl) for this awesome flake!
+
 Just add it to your NixOS `flake.nix` or home-manager:
 
 ```nix
 inputs = {
-  zen-browser.url = "github:MarceColl/zen-browser-flake";
+  zen-browser.url = "github:qlexqndru/zen-browser-flake";
   ...
 }
 ```
@@ -14,7 +20,7 @@ inputs = {
 ## Packages
 
 This flake exposes two packages, corresponding to the `specific` and `generic` zen versions.
-The generic version maximizes compatibility with old CPUs and kernels by compiling it with some
+The `generic` version maximizes compatibility with old CPUs and kernels by compiling it with some
 lower common denominator CFLAGS, the `specific` one targets newer CPUs and kernels but it may not
 work in your case.
 
