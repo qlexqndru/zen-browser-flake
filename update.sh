@@ -14,10 +14,11 @@ if [ "$oldversion" != "$version" ] && [[ "$version" =~ $regex ]]; then
   echo "Prefetching file..."
   x86_64Hash=$(nix store prefetch-file "$x86_64Url" --log-format raw --json | jq -rc '.hash')
   
+  # New simplified JSON structure
   echo '{
-    "version":"'"$version"'",
-    "hash":"'"$x86_64Hash"'",
-    "url":"'"$x86_64Url"'"
+    "version": "'"$version"'",
+    "url": "'"$x86_64Url"'",
+    "hash": "'"$x86_64Hash"'"
   }' | jq -c . >"$info"
 else
   echo "zen is up to date"
