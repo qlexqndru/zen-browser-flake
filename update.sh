@@ -1,6 +1,6 @@
 #!/usr/bin/env -S nix shell nixpkgs#jq -c bash
 set -euo pipefail
-regex="^[0-9]\.[0-9]\.[0-9].*$"
+regex="^[0-9]+\.[0-9]+[a-zA-Z0-9.-]*$"
 info="info.json"
 oldversion=$(jq -rc '.version' "$info")
 echo "Old version: $oldversion"
