@@ -16,7 +16,7 @@ echo "Version comparison: $([[ "$oldversion" != "$version" ]] && echo "different
 if [ "$oldversion" != "$version" ] && [[ "$version" =~ $regex ]]; then
   echo "Found new version $version"
   sharedUrl="https://github.com/zen-browser/desktop/releases/download"
-  x86_64Url="${sharedUrl}/${version}/zen.linux-x86_64.tar.bz2"
+  x86_64Url="${sharedUrl}/${version}/zen.linux-x86_64.tar.xz"
   
   echo "Prefetching file..."
   x86_64Hash=$(nix store prefetch-file "$x86_64Url" --log-format raw --json | jq -rc '.hash')
